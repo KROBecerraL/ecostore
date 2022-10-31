@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="customCSS01.css" rel="stylesheet">
+    <title>Buena Vida</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row my-2">
+            <div class="col-md-5">
+                <img src="src-eco-store/logo.jpg" alt="logo" width="250" height="85" style="border-radius: 10px;">
+            </div>
+            <div class="col-md-4 p-1 mt-4">
+                <div class="input-group">
+                    <input class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" type="search"
+                        value="¿Qué producto estás buscando?..." id="example-search-input1">
+                    <span class="input-group-append">
+                        <div class="input-group-text border-0 bg-transparent ml-n5"><i class="fa fa-search"></i></div>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1 p-2 mt-3 text-center">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#5ccb5f" class="bi bi-heart"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                    <br>
+                    Mis Favoritos
+                </p>
+            </div>
+            <div class="col-md-1 p-2 mt-3 text-center">
+                <button type="button" class="btnLabel" id="dropdownCuenta" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#5ccb5f"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    <br>
+                    Mi Cuenta
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownCuenta">
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg> Mi Cuenta</a></li>
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg> Mis Favoritos</a></li>
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg> Mi Carrito</a></li>
+                    <li><a class="dropdown-item" href="IU01_InicioSesion.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+                            </svg> Entrar</a></li>
+                    <li><a class="dropdown-item" href="IU01_Registro.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                <path fill-rule="evenodd"
+                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                            </svg> Crear una cuenta</a></li>
+                </ul>
+            </div>
+            <div class="col-md-1 p-2 mt-3 text-center">
+                <button type="button" class="btnLabel" data-bs-toggle="modal" data-bs-target="#popupCart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#5ccb5f" class="bi bi-basket3"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                    </svg>
+                    <br>
+                    Mi Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- Articulos de la vitrina -->
+        <div class="row justify-content-center top-buffer">
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item"">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <div class="sale">-50%</div>
+                <img src="src-eco-store/13.jpg" alt="aceite_dulces" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt1">
+                <p class="nombreProd">Aceite corporal de almendras dulces con dosificador 500ml</p>
+                <p class="cantidadProd">500ML</p>
+                <p class="precio">11,55 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/14.jpg" alt="parches_oro" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt2">
+                <p class="nombreProd">Aceite Corporal de Granada</p>
+                <p class="cantidadProd">100ML</p>
+                <p class="precio">22,90 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <div class="sale">-50%</div>
+                <img src="src-eco-store/15.jpg" alt="parches_iluminadores" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt3">
+                <p class="nombreProd">Aceite Corporal de Rosa Mosqueta</p>
+                <p class="cantidadProd">100ML</p>
+                <p class="precio">22,90 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/16.jpg" alt="parches_contorno" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt4">
+                <p class="nombreProd">Aceite corporal Embellecedor del Busto</p>
+                <p class="cantidadProd">100ML</p>
+                <p class="precio">81,70 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/17.jpg" alt="discos_desmaquillantes" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt5">
+                <p class="nombreProd">Aceite corporal Reafirmante de Tejidos</p>
+                <p class="cantidadProd">150ML</p>
+                <p class="precio">60,00 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/18.jpg" alt="aceite_celulitis" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt6">
+                <p class="nombreProd">Aceite corporal Reafirmante del Busto</p>
+                <p class="cantidadProd">100ML</p>
+                <p class="precio">81,70 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/19.jpg" alt="aceite_antiinflamatorio" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt7">
+                <p class="nombreProd">Aceite corporal Reina de Egipto</p>
+                <p class="cantidadProd">150ML</p>
+                <p class="precio">57,30 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/20.jpg" alt="aceite_coco" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt8">
+                <p class="nombreProd">Aceite daúrico corporal de Natura Siberica</p>
+                <p class="cantidadProd">370ML</p>
+                <p class="precio">18,95 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/21.jpg" alt="aceite_siberiano" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt9">
+                <p class="nombreProd">Aceite de Aguacate corporal</p>
+                <p class="cantidadProd">125ML</p>
+                <p class="precio">15,00 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/22.jpg" alt="aceite_sculptor" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt10">
+                <p class="nombreProd">Aceite de almendras corporal Bio</p>
+                <p class="cantidadProd">125ML</p>
+                <p class="precio">14,95 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/23.jpg" alt="aceite_almendras" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt11">
+                <p class="nombreProd">Aceite de Argán Bio</p>
+                <p class="cantidadProd">30ML</p>
+                <p class="precio">12,99 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+            <div class="col-md-2 p-3 my-1 mx-1 cell text-center item">
+                <div class="favoriteHeart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </div>
+                <img src="src-eco-store/24.jpg" alt="aceite_dosificador" width="100" height="100" data-bs-toggle="modal" data-bs-target="#popupArt12">
+                <p class="nombreProd">Aceite de Argán Bio</p>
+                <p class="cantidadProd">100ML</p>
+                <p class="precio">25,95 €</p>
+                <button type="button" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    Añadir a la cesta
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <nav aria-label="navigation">
+                <ul class="pagination" style="justify-content: right;">
+                    <li class="page-item"><a class="page-link" href="IU01_Vitrina.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="IU01_Vitrina03.html">3</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- The Modal -->
+        <div class="modal" id="popupCart">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title tituloModal">MI CARRITO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="src-eco-store/1.jpg" altname="aceite_clavo" height="100" width="100">
+                            </div>
+                            <div class="col-7">
+                                <p class="itemCarrito">ACEITE ESENCIAL DE CLAVO</p>
+                                <p class="itemCarrito">500ML</p>
+                                <p class="itemCarrito">Cantidad: <input type="number" min="1" step="1"
+                                        class="form-control" id="amountInput" value="1"></p>
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn-close float-end"></button>
+                                <p class="precioCarrito">7,99€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col">
+                                <p class="precio" style="text-align: left;">TOTAL (IVA incluido)</p>
+                            </div>
+                            <div class="col">
+                                <p class="precioF">7,99 €</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <div class="row">
+                            <button type="button" class="cartBtn">Ir al carrito</button>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="cartBtn">Realizar pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 1 -->
+        <div class="modal" id="popupArt1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/13.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite corporal de almendras dulces con dosificador 500ml</p>
+                                <p class="cantidadProd pLeft">500ML</p>
+                                <p class="precio pLeft">11,55 €</p>
+                                <p class="pLeft">El Aceite de Almendras dulces es básico para una hidratación y nutrición de la piel. Puedes utilizarlo en todas las partes de tu cuerpo preferiblemente después de la ducha con la piel húmeda, para ayudar a su absorción llegando a las capas profundas de la piel. Un aceite neutro apto para todo tipo de pieles y edades, utilizándose para toda la familia desde las edades más tempranas. Es ideal como base para formularlo con otros aceites, aceites esenciales y lociones.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 2 -->
+        <div class="modal" id="popupArt2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/14.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite Corporal de Granada</p>
+                                <p class="cantidadProd pLeft">100ML</p>
+                                <p class="precio pLeft">22,90 €</p>
+                                <p class="pLeft">El aceite corporal de granada es de acción antioxidante intensiva que sirve para la regeneración celula, reafirmando y mejorando la elasticidad. Está indicado para pieles secas, maduras y estresadas, pues ayuda a prevenir el envejecimiento prematuro de la piel. Con ingredientes 100% naturales y ecológicos, que otorgan un aroma sensual y dulce. Testado dermatológicamente, no testado en animales. Apto para veganos.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 3 -->
+        <div class="modal" id="popupArt3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/15.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite Corporal de Rosa Mosqueta</p>
+                                <p class="cantidadProd pLeft">100ML</p>
+                                <p class="precio pLeft">22,90 €</p>
+                                <p class="pLeft">La principal acción de la Rosa Mosqueta es la regeneración de la piel y elasticidad, aportando tonicidad a la piel. Combate los primeros signos de envejecimiento de la piel. Este producto combina la acción alisante de la rosa mosqueta con las propiedades hidratantes del aceite de jojoba. Da como resultado un aceite muy nutritivo, de una textura ligera y muy absorvente. Testado dermatológicamente en todo tipo de pieles, pero no en animales. Apto para veganos. De uso diario.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 4 -->
+        <div class="modal" id="popupArt4">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/16.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite corporal Embellecedor del Busto</p>
+                                <p class="cantidadProd pLeft">100ML</p>
+                                <p class="precio pLeft">81,70 €</p>
+                                <p class="pLeft">Aceite corporal empleado para moldear y realzar el busto dándole una apariencia de mayor volumen. Hidrata y nutre ayudando a prevenir las estrías de esta zona tan sensible. Utilízalo directamente con ligeros masajes circulares hasta su total absorción. Puedes utilizarlo de forma diaria, para mejores resultados te aconsejamos de dos a tres aplicaciones al día.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 5 -->
+        <div class="modal" id="popupArt5">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/17.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite corporal Reafirmante de Tejidos</p>
+                                <p class="cantidadProd pLeft">150ML</p>
+                                <p class="precio pLeft">60,00 €</p>
+                                <p class="pLeft">Aceite corporal indispensable para prevenir la pérdida de firmeza de los tejidos y reafirmar las zonas que presentan flacidez. Puedes hidratar tu cuerpo de forma diaria con este aceite y beneficiarte de sus propiedades reafirmantes. Con ingredientes totalmente naturales consigue una hidratación en las capas profundas de la piel.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 6 -->
+        <div class="modal" id="popupArt6">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/18.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite corporal Reafirmante del Busto</p>
+                                <p class="cantidadProd pLeft">100ML</p>
+                                <p class="precio pLeft">81,70 €</p>
+                                <p class="pLeft">Aceite corporal específico de tratamiento que reafirma eficazmente el seno caído a la vez que hidrata y suaviza la piel devolviéndole su belleza. El tratamiento natural con este aceite realza el busto para que se muestre más bello. Este aceite está libre de hormonas y otros componentes químicos, se basa en ingredientes naturales con propiedades hidratantes y estimuladoras.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 7 -->
+        <div class="modal" id="popupArt7">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/19.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite corporal Reina de Egipto</p>
+                                <p class="cantidadProd pLeft">150ML</p>
+                                <p class="precio pLeft">57,30 €</p>
+                                <p class="pLeft">Aceite corporal de exótica fragancia que nutre en profundidad, combate el envejecimiento cutáneo, regenera y alisa, a la vez que aporta autoestima y confianza. Este aceite es muy usado y recomendado entre nuestros clientes gracias a su versatilidad y eficacia.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 8 -->
+        <div class="modal" id="popupArt8">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/20.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite daúrico corporal de Natura Siberica</p>
+                                <p class="cantidadProd pLeft">370ML</p>
+                                <p class="precio pLeft">18,95 €</p>
+                                <p class="pLeft">Relaja tu cuerpo con este fantástico producto con el que podrás disfrutar de momentos únicos. Aceite daúrico corporal es perfecto para pieles secas. Una explosión de sensaciones gracias a su composición que revitalizará tu piel.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 9 -->
+        <div class="modal" id="popupArt9">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/21.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite de Aguacate corporal</p>
+                                <p class="cantidadProd pLeft">125ML</p>
+                                <p class="precio pLeft">15,00 €</p>
+                                <p class="pLeft">El aceite de aguacate actúa un bálsamo perfecto para la piel. Destaca por su efecto nutritivo, protector y regenerante. Indicado para pieles secas, agrietadas y envejecidas. Tiene una excelente penetración y además ayuda a filtrar de forma natural la radiación solar.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 10 -->
+        <div class="modal" id="popupArt10">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/22.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite de almendras corporal Bio</p>
+                                <p class="cantidadProd pLeft">125ML</p>
+                                <p class="precio pLeft">14,95 €</p>
+                                <p class="pLeft">Hidrata y nutre tu piel con este aceite de almendras ecológico de primera prensada en frío. Te recomendamos su uso después de la ducha con la piel húmeda, mejora su absorción. Puedes utilizarlo de base para formularlo con otro aceites, aceites esenciales y lociones.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 11 -->
+        <div class="modal" id="popupArt11">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/23.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite de Argán Bio</p>
+                                <p class="cantidadProd pLeft">30ML</p>
+                                <p class="precio pLeft">12,99 €</p>
+                                <p class="pLeft">Este aceite vegetal rico en vitaminas y antioxidantes te hará lucir una piel radiante. El aceite de argán te aportará la luminosidad y elasticidad que necesitas para presumir de belleza natural. Ideal para todo tipo de pieles y capaz de nutrir las capas profundas de la piel.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articulo 12 -->
+        <div class="modal" id="popupArt12">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <img src="src-eco-store/24.jpg" height="150" width="150">
+                            </div>
+                            <div class="col-8">
+                                <p class="nombreProd pLeft">Aceite de Argán Bio</p>
+                                <p class="cantidadProd pLeft">100ML</p>
+                                <p class="precio pLeft">25,95 €</p>
+                                <p class="pLeft">Este aceite vegetal rico en vitaminas y antioxidantes te hará lucir una piel radiante. El aceite de argán te aportará la luminosidad y elasticidad que necesitas para presumir de belleza natural. Ideal para todo tipo de pieles y capaz de nutrir las capas profundas de la piel.</p>
+                                <br>
+                                <div class="flexB">
+                                    <input type="number" min="1" step="1" class="form-control" id="amountInput" value="1"></p>
+                                    <button type="button" class="btn2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                        </svg>
+                                        Añadir a la cesta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
